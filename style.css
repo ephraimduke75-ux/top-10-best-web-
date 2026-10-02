@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    
+    background-color: #fff;
+    margin: 0;
+    padding: 0 0 80px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+.text-box {
+    max-width: 800px;
+    min-height: 250px;
+    margin: 40px auto;
+    padding: 32px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #e4e4e4;
+    color: #000000;
+}
+.faq-list {
+    max-width: 800px;
+    margin: 24px auto;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: faq;
+}
+.faq-list li {
+    counter-increment: faq;
+    padding-left: 8px;
+}
+.faq-item {
+    min-height: 0;
+    padding: 0;
+    margin: 12px 0;
+}
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 32px;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+}
+.faq-item summary::before {
+    content: counter(faq) ".";
+    flex: 0 0 auto;
+}
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+.faq-item summary::after {
+    content: "";
+    flex: 0 0 10px;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 160ms ease;
+}
+.faq-item[open] summary::after {
+    transform: rotate(225deg);
+}
+.faq-item p {
+    margin: 0;
+    padding: 0 32px 24px;
+}
+button{
+	display:block;
+	padding: 10px 20px;
+	background-color: #d1470c;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.faint-line {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 24px 0;
+}
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff9f9;
+    color: rgb(198, 71, 48);
+    text-decoration: none;
+    border-radius: 4px;
+}
+.p-button {
+   border-radius: 999px;
+    background-color: #000000;
+}
+.related-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.related-meta p {
+    margin: 0;
+}
+
+.highlight-section {
+  background-color: darkgreen;
+  color: white;
+  padding: 20px;
+}
