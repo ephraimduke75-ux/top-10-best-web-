@@ -77,14 +77,36 @@ body {
     margin: 0;
     padding: 0 32px 24px;
 }
-button{
-	display:block;
-	padding: 10px 20px;
-	background-color: #d1470c;
-	color: white;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+button,
+.practice-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d1470c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+    text-decoration: none;
+    transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+button:hover,
+.practice-button:hover {
+    background-color: #a93608;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
+    transform: translateY(-2px);
+}
+button:active,
+.practice-button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+button:focus-visible,
+.practice-button:focus-visible,
+.button-link:focus-visible,
+.table-link:focus-visible {
+    outline: 3px solid #1b6ac9;
+    outline-offset: 3px;
 }
 .faint-line {
     width: 100%;
@@ -99,6 +121,31 @@ button{
     color: rgb(198, 71, 48);
     text-decoration: none;
     border-radius: 4px;
+    transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+.button-link:hover {
+    background-color: #f8dfd9;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+    transform: translateY(-2px);
+}
+.button-link:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+.table-link {
+    color: #c64730;
+    text-decoration: none;
+}
+.table-link:hover {
+    color: #8f2e1e;
+    text-decoration: underline;
+}
+@media (prefers-reduced-motion: reduce) {
+    button,
+    .practice-button,
+    .button-link {
+        transition: none;
+    }
 }
 .p-button {
    border-radius: 999px;
